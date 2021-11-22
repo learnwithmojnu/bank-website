@@ -1,8 +1,10 @@
 /************************************************************************/
 // Get Current Balance from LocalStorage
 var finalBalance = localStorage.getItem("totalAmount");
-balance(finalBalance);
-function balance(finalBalance){
+if(finalBalance === null){
+    document.getElementById('current-balance').innerText = '0.00';
+}
+else{
     document.getElementById('current-balance').innerText = finalBalance;
 }
 /************************************************************************/
@@ -24,8 +26,8 @@ LoginBtn.addEventListener('click', function() {
 //1. For Deposit button
 document.querySelector('#deposit-btn').addEventListener('click', function(){
     var deposit = document.querySelector('#deposit-amount').value;
-    if(deposit < 0){
-        alert('You can Not Deposit Negative Amount');
+    if(deposit < 0 || !(deposit > 48 || deposit < 57)){
+        alert('Wrong Value');
     }
     else{
         userTypeInDeposit(deposit);
@@ -35,8 +37,8 @@ document.querySelector('#deposit-btn').addEventListener('click', function(){
 //>>>>>>>>>>>>>>>>>>>>>>
 document.querySelector('#withdraw-btn').addEventListener('click', function(){
     var withdraw = document.querySelector('#withdraw-amount').value;
-    if(withdraw < 0){
-        alert('You can Not Withdraw Negative Amount');
+    if(withdraw < 0 || !(withdraw > 48 || withdraw < 57)){
+        alert('Invalid Amount');
     }
     else{
         userTypeInWithdraw(withdraw);
