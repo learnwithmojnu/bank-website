@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 100px;
+}
+.submit-area {
+    padding: 40px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+}
+#login {
+    margin-left: 3px;
+}
+#transaction-area {
+     display: none;
+}
+.deposit-box {
+    background-color: slateblue;
+}
+.withdraw-box {
+    background-color: lightsalmon;
+}
+.balance-box {
+    background-color: orange;
+}
+.box-all {
+    margin: 0 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+/*RESPONSIVE DESIGN*/
+@media(max-width: 760px){
+    body {
+    padding: 1%;
+}
+.box-all {
+    margin: 5px 0;
+}
+}
