@@ -6,4 +6,4 @@
 - Core JS
 
 ## live : 
-- [https://learnwithmojnu.github.io/bank-website] (https://learnwithmojnu.github.io/bank-website)
+- [https://learnwithmojnu.github.io/bank-website](https://learnwithmojnu.github.io/bank-website)
