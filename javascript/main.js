@@ -54,7 +54,6 @@ function userTypeInDeposit(input){
     depositBalance.innerHTML = input;
     var totalAmount = (+input) + (+totalBalance);
     localStorage.setItem("totalAmount", totalAmount);
-    depositBalance.innerHTML = '0';
     document.getElementById('current-balance').innerText = totalAmount;
 }
 
@@ -66,7 +65,6 @@ function userTypeInWithdraw(input){
     withdrawBalance.innerHTML = input;
     totalAmount = (+totalBalance) - input;
     localStorage.setItem("totalAmount", totalAmount);
-    withdrawBalance.innerHTML = '0';
     document.getElementById('current-balance').innerText = totalAmount;
 }
 /************************************************************************/
